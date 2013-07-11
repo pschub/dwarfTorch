@@ -1,0 +1,13 @@
+
+Uses exponential time limit increase and incorporates 1Hz blinking led. To keep
+the light on, the user must trigger the motion sensor at regular intervals no
+more than timeLimit seconds apart. The previous version only gave users a fixed
+15 second timeLimit, which was too difficult. The sensors weren't sensitive
+enough to pick up quiet work in this time span. Version 2.0 gives users extra
+time-to-trigger in the form of an exponentially growing timeLimit. Hopefully
+this will improve the light conditions in the basement.
+
+Version 1.0 - March 2012 
+Takes inputs from pir sensor and turns on lights on motion.
+Time on is set by define in main.h. Also sends out a bargraph of on-time
+remaining to a si-po shift register.
